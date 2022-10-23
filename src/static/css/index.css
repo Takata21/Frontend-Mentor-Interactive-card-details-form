@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+:root {
+    /* ### Primary */
+    --LinearGradientPrimary: hsl(249, 99%, 64%);
+    --LinearGradientSecondary: hsl(278, 94%, 30%);
+    --Red: hsl(0, 100%, 66%);
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 3%, 87%);
+    --DarkGrayishViolet: hsl(279, 6%, 55%);
+    --VeryDarkViolet: hsl(278, 68%, 11%);
+}
+
+header {
+    position: relative;
+    min-height: 240px;
+    background-image: url('../images/bg-main-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.card_front {
+    position: absolute;
+    top: 135px;
+    left: 15px;
+    width: 65%;
+    min-width: 283px;
+    height: 153px;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: url('../images/bg-card-front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--White);
+    z-index: 2;
+}
+
+.card_logo {
+    width: 50px;
+}
+
+.card_number {
+    margin: 35px auto 25px auto;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.card_front-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.card_back {
+    position: absolute;
+    top: 30px;
+    width: 65%;
+    right: 15px;
+    min-width: 283px;
+    height: 153px;
+    border-radius: 10px;
+    background-color: var(--LightGrayishViolet);
+}
+
+.magnetic_stripe {
+    height: 30px;
+    margin-top: 15px;
+    background-color: #2f2f2f;
+}
+
+.cvc_code {
+    width: 80%;
+    height: 30px;
+    margin: 25px auto;
+    border-radius: 5px;
+    background-color: var(--DarkGrayishViolet);
+}
+
+.csv_code-number {
+    display: flex;
+    height: 100%;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+    color: var(--White);
+}
+
+.card_name {
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+.form_card {
+    margin-top: 80px;
+    padding: 0 23px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px;
+}
+
+.form-label {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.form-control {
+    font-weight: 500;
+    padding: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    border: 1px solid var(--LightGrayishViolet);
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    outline: none;
+}
+
+.form-control::placeholder {
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--LightGrayishViolet);
+}
