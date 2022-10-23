@@ -110,19 +110,25 @@ header {
 .form_card {
     margin-top: 80px;
     padding: 0 23px;
+    position: relative;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin: 10px;
+    margin: 10px 0;
 }
+
+
+
+
 
 .form-label {
     text-transform: uppercase;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    font-size: .8rem;
 }
 
 .form-control {
@@ -130,6 +136,15 @@ header {
     padding: 12px;
     font-family: 'Space Grotesk', sans-serif;
     border: 1px solid var(--LightGrayishViolet);
+    border-radius: 5px;
+}
+
+.form-control.cvc {
+    width: 160px;
+}
+
+.form-control.date {
+    width: 70px;
     border-radius: 5px;
 }
 
@@ -141,4 +156,73 @@ header {
     font-weight: 700;
     font-family: 'Space Grotesk', sans-serif;
     color: var(--LightGrayishViolet);
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.form-exp {
+    display: flex;
+    gap: 15px;
+}
+
+.card-btn {
+    color: var(--White);
+    background-color: var(--VeryDarkViolet);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin: 15px auto;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+/*----------------ERROR-----------------*/
+.error {
+    color: var(--Red);
+}
+
+.form-control.error {
+    border: 1px solid var(--Red);
+}
+
+/*----------------MODAL-----------------*/
+.modal {
+    background-color: white;
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 40px;
+    gap: 15px;
+    text-align: center;
+}
+
+.modal.active {
+    visibility: visible;
+    display: flex;
+
+}
+
+.modal h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.6rem;
+
+}
+
+.modal p {
+    color: var(--DarkGrayishViolet);
+    font-weight: bold;
 }

@@ -53,37 +53,50 @@
         </div>
         <div class="form-group">
           <label for="Cardnumber" class="form-label">card number</label>
-          <input type="text" class="form-control" id="Cardnumber" placeholder="e.g.1234 5678 9123 0000">
+          <input type="text" class="form-control error" id="Cardnumber" placeholder="e.g.1234 5678 9123 0000">
+          <small class="error">Wrong format, numbers only</small>
         </div>
+        <div class="form-exp">
+          <div class="form-group exp">
+            <label for="" class="form-label"> Exp. Date (MM/YY)</label>
+            <div class=" input-container">
+              <input class="form-control date" type="number" placeholder="MM">
+              <input class="form-control date" type="number" placeholder="YY">
+            </div>
+            <small class="error">Can´t be blank</small>
+          </div>
+          <div class="form-group cvc">
+            <label for="" class="form-label">cvc</label>
+            <input class=" form-control cvc" placeholder="e.g. 123" type="number" name="" id="">
+            <small class="error">Can´t be blank</small>
+          </div>
+        </div>
+
+        <button class="card-btn">Confirm</button>
       </form>
+      <div class="modal">
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" fill="url(#a)" />
+          <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+          <defs>
+            <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6348FE" />
+              <stop offset="1" stop-color="#610595" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <h2>Thank you!</h2>
+        <p> We've added your card details
+        </p>
+        <button class="card-btn">Continue</button>
+      </div>
     </section>
 
   </main>
 
-
-
-
-
-
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Manuel Takata</a>.
+    Coded by <a href="#">MTakata</a>.
   </div>
   <script src="./src/js/main.js"></script>
 </body>
